@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+           form 
+           {
+               width: 250px;
+               height: 300px;
+               border: 1px solid black;
+               text-align: center;
+               background: lightblue;
+               box-shadow: 0px 0px 30px gray;
+            }
+           #display
+           {    
+               margin-top: 5px;
+               margin-bottom: 5px;          
+               width: 210px;
+               height: 50px;  
+               text-align:right;   
+               font-size: 30px;                
+           }
+           #keys
+           {
+               width: 50px;
+               height: 40px;               
+               margin-bottom: 6px;
+               cursor: pointer;                     
+           }
+           #equal
+           {
+               width: 50px;
+               height: 40px;               
+               margin-bottom: 6px;
+               cursor: pointer;
+           }
+            #del 
+            {
+                width: 50px;
+                height: 40px;
+                margin-bottom: 6px;
+                margin-left: 163px;
+                cursor: pointer;
+            }  
+
+        </style>
+        
+    </head>
+    
+    
+    <title>Calculator</title>
+
+    <body>      
+            <form>
+                <input type="text" id="display"/> <br />
+
+                <input type="button" value="C" id="del" onclick="addtoscreen('C')" /> <br />
+
+                <input type="button" value="9" id="keys" onclick="addtoscreen('9')" />
+                <input type="button" value="8" id="keys" onclick="addtoscreen('8')" />
+                <input type="button" value="7" id="keys" onclick="addtoscreen('7')" />
+                <input type="button" value="+" id="keys" onclick="addtoscreen('+')" />
+                <br />
+
+                <input type="button" value="6" id="keys" onclick="addtoscreen('6')" />
+                <input type="button" value="5" id="keys" onclick="addtoscreen('5')" />
+                <input type="button" value="4" id="keys" onclick="addtoscreen('4')" />
+                <input type="button" value="-" id="keys" onclick="addtoscreen('-')" />
+                <br />
+
+                <input type="button" value="3" id="keys" onclick="addtoscreen('3')" />
+                <input type="button" value="2" id="keys" onclick="addtoscreen('2')" />
+                <input type="button" value="1" id="keys" onclick="addtoscreen('1')" />
+                <input type="button" value="*" id="keys" onclick="addtoscreen('*')" />
+                <br />
+
+                <input type="button" value="0" id="keys" onclick="addtoscreen('0')" />
+                <input type="button" value="." id="keys" onclick="addtoscreen('.')" />                              
+                <input type="button" value="/" id="keys" onclick="addtoscreen('/')" />
+                <input type="button" value="=" id="equal" onclick="answer()" />
+            </form>
+
+            <script>
+                var box = document.getElementById('display');
+                 function addtoscreen(x)
+                {
+                     box.value += x;
+
+                     if( x == "C")
+                     {
+                         box.value = '';
+                     }
+                 }
+                 function answer()
+                 {
+                     x = box.value;
+                     x = eval(x);
+                     box.value = x;
+                 }
+            </script>
+    </body>
+</html>

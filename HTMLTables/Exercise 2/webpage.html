@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Member Registration</title>
+    <link rel="stylesheet" href="styles/vendor/bootstrap.css">
+    <link rel="stylesheet" href="style.css"/>
+
+    <style>
+        div {
+            margin: 10px;
+            font-size: 20px;
+            
+        }
+
+        span {
+            font-weight: bold;
+        }
+
+        input {
+            width: 200px;
+            height: 20px;
+            border-style: ridge;
+        }
+
+        img {
+            width: 120px;
+        }
+    </style>
+</head>
+
+<body>
+    <form class="form">
+        <div>
+            <label for="name">Member name:</label>
+            <input type="text" id="name" name="user-name">
+            <span class="help-inline">*req</span>
+        </div>
+
+        <div>
+            <label for="mail">E-mail:</label>
+            <input type="text" id="mail" name="user-mail">
+            <span class="help-inline">*req</span>
+        </div>
+
+        <div>
+            <label for="school">School:</label>
+            <input type="text" id="school" name="user-school">
+            <span class="help-inline">*req</span>
+        </div>
+
+        <img src="submit.png">
+    </form>
+</body>
+</html>
